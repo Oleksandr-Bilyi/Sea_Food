@@ -1,0 +1,31 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+[class*= "_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-facebook:before {
+	content: "\ea90";
+ }
+ ._icon-instagram:before {
+	content: "\ea92";
+ }
+ ._icon-telegram:before {
+	content: "\ea95";
+ }
+ ._icon-twitter:before {
+	content: "\ea96";
+ }
