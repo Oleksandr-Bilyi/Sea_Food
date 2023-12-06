@@ -6,7 +6,7 @@
 
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="shortcut icon" href="css/img/Logo/icons/Logo.ico">
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-type"  charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="description" content="">
@@ -20,7 +20,7 @@
 	</head>
 		<body>
 			<div class="wrapper">
-				<header class="header">
+				<header id="header" class="header lock-padding">
 						<div class="header__container">
 							<div class="header__logo"><a href="index.html" class="header--logo__link"><img src="css/img/Logo/Logo.png" alt="Logo"></a></div>
 							<div class="Header__mneu menu">
@@ -52,9 +52,9 @@
 
 							</div>
 							<div class="header__action action-header">
-								<a href="#" class="action-header__link">Log in</a>
-								<a href="#" class="action-header__link">Register</a>
-								<button class="action-header__button button button--border"><span>Contact</span>
+								<a href="users/login.html" class="action-header__link popup-link" target="_blank">Log in</a>
+								<a href="users/register.html" class="action-header__link popup-link" target="_blank">Register</a>
+								<button href="#" class="action-header__button button button--border"><span>Contact</span>
 								</button>
 							</div>
 							<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -182,18 +182,16 @@
 									<p> Stay updated with the latest new dishes on our menu, special offers and Site’s events!</p>
 								</div>
 							</div>
-							<div class="subscribe__contact">
+								<div class="subscribe__contact">
 
-								<form class="subscribe" action="/" method="post" enctype="multipart/form-data">
+									<form class="subscribe" action="#" method="post" enctype="multipart/form-data">
 
-										<div class="input__container">
-												<input class="subscribe__input" type="email" name="name" placeholder="Enter Your Email...">
-												<button class="subscribe__btn" type="submit">Subscribe</button>
-											</div>
-
-
-								</form>
-							</div>
+											<div class="input__container">
+													<input class="subscribe__input" type="email" name="name" placeholder="Enter Your Email...">
+													<button class="subscribe__btn" type="submit">Subscribe</button>
+												</div>
+									</form>
+								</div>
 							</div>
 
 					</section>
@@ -330,5 +328,30 @@
 			</div>
 		<script src="https://kit.fontawesome.com/d9f2112756.js" crossorigin="anonymous"></script>
 		<script src="js/script.js"></script>
+
+<!--Popups
+			<div id="popup" class="popup">
+				<div class="popup__body">
+					<div class="popup__content">
+						<a href="" class="popup__close close-popup">X</a>
+						<div class="popup__title"></div>
+						<div class="popup__text">
+							<a class="" href="#popup_2"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="popup_2" class="popup">
+				<div class="popup__body">
+					<div class="popup__content">
+						<a href="" class="popup__close close-popup">X</a>
+						<div class="popup__title"></div>
+						<div class="popup__text">
+						</div>
+					</div>
+				</div>
+			</div>
+		-->
+
 		</body>
 </html>
