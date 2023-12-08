@@ -1,5 +1,7 @@
+
 "use script"
 
+//Руєстрація
 let name = document.querySelector('#name');
 let email = document.querySelector('#email');
 let password = document.querySelector('#password');
@@ -37,7 +39,7 @@ submit.addEventListener("click", function(e){
 	e.preventDefault();
 });
 
-
+//Кнопка показу та приховання пароля
 const inputPass = document.getElementById('password');
 const iconPass = document.getElementById('form-icon');
 
@@ -49,3 +51,20 @@ iconPass.addEventListener("click", function(e) {
 	}
 	e.preventDefault();
 });
+
+
+//Авторизація
+function myf() {
+	let email = document.getElementById('email').value;
+	let password = document.getElementById('password').value;
+	let role = document.getElementById('role').value;
+
+	let email1 = 'qwer';
+	let password1 = 321;
+
+	if(email == email1 &&  password == password1){
+		alert('All are great');
+	} else {
+		alert('Error');
+	}
+}
