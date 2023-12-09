@@ -5,7 +5,6 @@
 		<title>Sea food</title>
 
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/menu.css">
 		<link rel="shortcut icon" href="css/img/Logo/icons/Logo.ico">
 		<meta http-equiv="Content-type"  charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -21,138 +20,123 @@
 	</head>
 		<body>
 			<div class="wrapper">
-
 				<header id="header" class="header lock-padding">
-					<div class="header__container">
-						<div class="header__logo"><a href="index.html" class="header--logo__link"><img src="css/img/Logo/Logo.png" alt="Logo"></a></div>
-						<div class="Header__mneu menu">
+						<div class="header__container">
+							<div class="header__logo"><a href="index.html" class="header--logo__link"><img src="css/img/Logo/Logo.png" alt="Logo"></a></div>
+							<div class="Header__mneu menu">
 
-							<nav class="menu__body">
-									<ul class="menu__list">
-										<li class="menu__item"><a href="index.html" class="menu_link">Home</a></li>
-										<li>
-											<a href="Menu.html" class="menu_link">Menu</a>
-											<span class="menu__arrow"></span>
-											<ul class="menu__sub-list">
-												<li>
-													<a href="#" class="menu_sub-link">Desserts</a>
-												</li>
-												<li>
-													<a href="#" class="menu_sub-link">starters</a>
-												</li>
-												<li>
-													<a href="#" class="menu_sub-link">Main dishes</a>
-												</li>
-											</ul>
-										</li>
-										<li ><a href="About.html" class="menu_link">About</a></li>
-										<li ><a href="Service.html" class="menu_link">Service</a></li>
+								<nav class="menu__body">
+										<ul class="menu__list">
+											<li class="menu__item"><a href="index.html" class="menu_link">Home</a></li>
+											<li>
+												<a href="Menu.html" class="menu_link">Menu</a>
+												<span class="menu__arrow"></span>
+												<ul class="menu__sub-list">
+													<li>
+														<a href="desserts.html" class="menu_sub-link">Desserts</a>
+													</li>
+													<li>
+														<a href="starters.html" class="menu_sub-link">starters</a>
+													</li>
+													<li>
+														<a href="Menu-main.html" class="menu_sub-link">Main dishes</a>
+													</li>
+												</ul>
+											</li>
+											<li ><a href="About.html" class="menu_link">About</a></li>
+											<li ><a href="Service.html" class="menu_link">Service</a></li>
 
-									</ul>
+										</ul>
 
-							</nav>
+								</nav>
 
-						</div>
-						<div class="header__action action-header">
-							<a href="users/login.html" class="action-header__link popup-link" target="_blank">Log in</a>
-							<a href="users/register.html" class="action-header__link popup-link" target="_blank">Register</a>
-							<button href="#" class="action-header__button button button--border"><span>Contact</span>
-							</button>
-						</div>
-						<button type="button" class="menu__icon icon-menu"><span></span></button>
-					</div>
-					<div class="basket">
-						<a href="#" alt="">
-							<div class="basket__container">
-								<i class="fa-solid fa-cart-shopping fa-lg"></i>
 							</div>
-						</a>
-					</div>
-			</header>
-
-			<main class="page">
-				<img src="css/img/Main/Menu/Main_manu/BG/Orange-bg.jpg" class="welcome__bg" alt="Main background">
-				<section class="menu__main__dishes">
-					<section class="main__dishes__label">
-						<div class="center__title">
-							<div class="title__container">
-								<div class="main__dishes__title">Main Dishes</div>
+							<div class="header__action action-header">
+								<a href="users/login.html" class="action-header__link popup-link" target="_blank">Log in</a>
+								<a href="users/register.html" class="action-header__link popup-link" target="_blank">Register</a>
+								<button href="#" class="action-header__button button button--border"><span>Contact</span>
+								</button>
 							</div>
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
 						</div>
-						<img src="css/img/Main/Menu/Main_manu/Main-img.jpg" class="main_img" alt="Main dishes">
+						<div class="basket">
+							<a href="#" alt="">
+								<div class="basket__container">
+									<i class="fa-solid fa-cart-shopping fa-lg"></i>
+								</div>
+							</a>
+						</div>
+				</header>
+
+				<main class="page">
+
+					<section class="main__menu">
+						<div class="main__menu__container">
+								<div class="main__menu__items">
+									<div class="menu__item">
+										<a href="starters.html" class="menu__item__link">
+											<div class="menu__underground"></div>
+											<img src="css/img/Main/Menu/Starters-img.jpg" class="item__img" alt="Starters">
+											<div class="menu__content">
+												<div class="menu__item__title">
+													Starters
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="menu__item">
+										<a href="Menu-main.html" class="menu__item__link">
+											<div class="menu__underground"></div>
+											<img src="css/img/Main/Menu/Main-img.jpg" class="item__img" alt="Desserts">
+											<div class="menu__content menu__content-main">
+												<div class="menu__item__title">
+													Main<br>dishes
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="menu__item">
+										<a href="desserts.html" class="menu__item__link">
+											<div class="menu__underground"></div>
+											<img src="css/img/Main/Menu/dessert-img.jpg" class="item__img"  alt="Starters">
+											<div class="menu__content">
+												<div class="menu__item__title">
+													Desserts
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+						</div>
 					</section>
 
-				</section>
-				<section class="content__products">
-					<div class="product__container">
-						<div class="products__items">
-							<div class="products__item">
-								<a href="" class="products__image">
-									<img src="img/fls.jpg" alt="">
-								</a>
-								<h2 href="" class="products__name">Lorem ipsum</h2> <div class="products__text"> dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.</div>
-								<div class="products__price"><span>320₴</span>
-									<a href="" class="products__button">Buy</a>
-								</div>
-
-							</div>
-							<div class="products__item">
-								<a href="" class="products__image">
-									<img src="img/fls.jpg" alt="">
-								</a>
-								<h2 href="" class="products__name">Lorem ipsum</h2> <div class="products__text"> dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.</div>
-								<div class="products__price"><span>320₴</span>
-									<a href="" class="products__button">Buy</a>
-								</div>
-
-							</div>
-							<div class="products__item">
-								<a href="" class="products__image">
-									<img src="img/fls.jpg" alt="">
-								</a>
-								<h2 href="" class="products__name">Lorem ipsum</h2> <div class="products__text"> dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.</div>
-								<div class="products__price"><span>320₴</span>
-									<a href="" class="products__button">Buy</a>
-								</div>
-
-							</div>
-							<div class="products__item">
-								<a href="" class="products__image">
-									<img src="img/fls.jpg" alt="">
-								</a>
-								<h2 href="" class="products__name">Lorem ipsum</h2> <div class="products__text"> dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.</div>
-								<div class="products__price"><span>320₴</span>
-									<a href="" class="products__button">Buy</a>
-								</div>
-
-							</div>
-							<div class="products__item">
-								<a href="" class="products__image">
-									<img src="img/fls.jpg" alt="">
-								</a>
-								<h2 href="" class="products__name">Lorem ipsum</h2> <div class="products__text"> dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.</div>
-								<div class="products__price"><span>320₴</span>
-									<a href="" class="products__button">Buy</a>
-								</div>
-
-							</div>
-							<div class="products__item">
-								<a href="" class="products__image">
-									<img src="img/fls.jpg" alt="">
-								</a>
-								<h2 href="" class="products__name">Lorem ipsum</h2> <div class="products__text"> dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.</div>
-								<div class="products__price"><span>320₴</span>
-									<a href="" class="products__button">Buy</a>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</section>
-
-			</main>
+				</main>
 
 				<footer class="footer">
+
+					<section class="section__subscribe">
+						<div class="footer__subscribe">
+							<div class="subscribe__content">
+								<div class="sub__title">
+									<h2>Do You Like Tasty Food?</h2>
+								</div>
+								<div class="sub__text">
+									<p> Stay updated with the latest new dishes on our menu, special offers and Site’s events!</p>
+								</div>
+							</div>
+								<div class="subscribe__contact">
+
+									<form class="subscribe" action="#" method="post" enctype="multipart/form-data">
+
+											<div class="input__container">
+													<input class="subscribe__input" type="email" name="name" placeholder="Enter Your Email...">
+													<button class="subscribe__btn" type="submit">Subscribe</button>
+												</div>
+									</form>
+								</div>
+							</div>
+
+					</section>
 
 						<div class="footer__container">
 							<div class="footer__inner">
@@ -286,7 +270,6 @@
 			</div>
 		<script src="https://kit.fontawesome.com/d9f2112756.js" crossorigin="anonymous"></script>
 		<script src="js/script.js"></script>
-
 
 		</body>
 </html>

@@ -64,6 +64,7 @@ function myf() {
 
 	if(email == email1 &&  password == password1){
 		alert('All are great');
+		window.location.href = "index.html";
 	} else {
 		alert('Error');
 	}

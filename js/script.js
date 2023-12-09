@@ -186,7 +186,7 @@ function bodyUnlock() {
 
 /*
 document.addEventListener('keydown', function (e){
-	if (KeyboardEvent(e) == 27) {
+	if (KeyboardEvent(e) == 13) {
 		const popupActive = document.querySelector('.popup.open');
 		popupClose(popupActive);
 	}
