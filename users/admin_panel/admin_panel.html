@@ -24,7 +24,7 @@
 </head>
 <body>
     <header>
-        <h1>Ласкаво просимо до адміністративної панелі</h1>
+        <h1>Адміністративна панель</h1>
     </header>
 
     <section>
@@ -39,17 +39,40 @@
                 </tr>
             </thead>
             <tbody>
+
+					<h1>Адміністративна панель</h1>
+
+					<!-- Форма для прийому замовлень -->
+					<form id="orderForm">
+						 <label for="customerName">Ім'я клієнта:</label>
+						 <input type="text" id="customerName" required>
+
+						 <label for="foodItem">Страва:</label>
+						 <input type="text" id="foodItem" required>
+
+						 <label for="quantity">Кількість:</label>
+						 <input type="number" id="quantity" required>
+
+						 <button type="button" onclick="submitOrder()">Прийняти замовлення</button>
+					</form>
+
+					<!-- Список прийнятих замовлень -->
+					<h2>Прийняті замовлення:</h2>
+					<ul id="orderList"></ul>
+
+					<script src="js/admin_panel.js"></script>
                 <!-- Тут буде автоматично додано товари за допомогою JavaScript -->
             </tbody>
         </table>
     </section>
 
-    <script>
+
+    <!--<script>
         document.addEventListener("DOMContentLoaded", function () {
             // Додати приклад товару
             addProductToTable(1, "Риба", "$10.99", 50);
 				addProductToTable(2, "Короп", "$88", 7);
-				
+
             // Додайте інші товари, які потрібно автоматично додати
         });
 
@@ -67,7 +90,7 @@
             cell3.innerHTML = price;
             cell4.innerHTML = quantity;
         }
-    </script>
+    </script>-->
 
     <footer>
         <p>&copy; 2023 Адміністративна панель</p>
