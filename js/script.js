@@ -88,7 +88,7 @@ if(menulinks.length > 0) {
 */
 
 //Анімація Пупапів
-/*
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
@@ -112,7 +112,7 @@ if(popupLinks.length > 0) {
 const popupCloseIcon = document.querySelectorAll('close-popup');
 if(popupCloseIcon.length > 0){
 	for(let index; index < popupCloseIcon.length; index++){
-		const el =popupCloseIcon[index];
+		const el = popupCloseIcon[index];
 		el.addEventListener("click", function (e) {
 			popupClose(el.closest('.popup'));
 			e.preventDefault();
@@ -182,7 +182,6 @@ function bodyUnlock() {
 		unlock = true;
 	}, timeout);
 }
-*/
 
 /*
 document.addEventListener('keydown', function (e){
@@ -192,3 +191,20 @@ document.addEventListener('keydown', function (e){
 	}
 });
 */
+
+						// Basket
+
+let cart = {
+	'sefdr2' : 2,
+	'adsef5' : 30,
+};
+
+// Збільшення кількості товарів
+
+
+
+// Зменшення кількості товарів
+
+
+
+// Видалення товарів

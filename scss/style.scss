@@ -716,7 +716,7 @@ body._touch .menu__arrow {
 	}
 }
 
-/* Coments */
+									/* Coments */
 
 .section_header {
 	text-align: center;
@@ -839,9 +839,9 @@ body._touch .menu__arrow {
 		color: yellow;
 	}
 }
-/*========== Footer ============*/
+									/*========== Footer ============*/
 
-/* Section-subscribe */
+											/* Section-subscribe */
 
 .section__subscribe {
 	background-color: rgb(150, 79, 47);
@@ -1124,7 +1124,7 @@ body._touch .menu__arrow {
 	}
 }
 
-/* ========== PAGE About ======= */
+					/* ========== PAGE About ======= */
 
 .page-bg {
 	background-color: rgba(62, 177, 253, 0.707);
@@ -1456,6 +1456,10 @@ body._touch .menu__arrow {
 					padding: 10px 15px;
 					font-size: 16px;
 
+					@media (max-width: 1024px) {
+						width: 40%;
+				}
+
 						@media (max-width: 769px) {
 							width: 50%;
 					}
@@ -1483,6 +1487,10 @@ body._touch .menu__arrow {
 				padding: 15px 15px;
 				font-size: 16px;
 
+				@media (max-width: 1024px) {
+					width: 60%;
+			}
+
 					@media (max-width: 769px) {
 						width: 75%;
 				}
@@ -1506,9 +1514,13 @@ body._touch .menu__arrow {
 				transition: border-color .4s, color .4s;
 				font-weight: 500;
 
-				@media (max-width: 769px) {
-					width: 100%;
+				@media (max-width: 1024px) {
+					width: 60%;
 			}
+
+					@media (max-width: 769px) {
+						width: 100%;
+				}
 			}
 
 			.button__action:hover {
@@ -1568,11 +1580,14 @@ body._touch .menu__arrow {
 
 															/* POP-up */
 
-/*		Pop-up
-		.popup.open {
-		opacity: 1;
-		visibility: visible;
-		}
+	// Pop-up
+
+			.popup.open {
+			opacity: 1;
+			visibility: visible;
+			}
+
+
 
 .popup {
 	position: fixed;
@@ -1589,7 +1604,7 @@ body._touch .menu__arrow {
 	transition: all .8s ease 0s;
 
 	.popup__body {
-		min-height: 100vh;
+		min-height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -1599,8 +1614,8 @@ body._touch .menu__arrow {
 			position: relative;
 			background-color: #fff;
 			color: #000;
-			max-width: 800px;
-			min-height: 600px;
+			width: 800px;
+			height: 600px;
 			padding: 30px;
 			text-align: center;
 			transition: all .8s ease 0s;
@@ -1615,8 +1630,6 @@ body._touch .menu__arrow {
 				right: 10px;
 				text-decoration: none;
 				transition: all .8s ease 0s;
-
-
 			}
 
 			.popup__title {
@@ -1624,11 +1637,8 @@ body._touch .menu__arrow {
 				margin: 0px 0px 1em 0px;
 			}
 
-			.popup__text {
 
-			}
 		}
 	}
 
 }
-*/
