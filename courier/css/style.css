@@ -1,0 +1,188 @@
+/*Обнулення*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+/* a:focus,a:active{outline: none;} */
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+/* a,a:visited{text-decoration: none;} */
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+body {
+
+	padding-top: 10px;
+	overflow: auto;
+	font-size: 18px;
+	font-family:Arial, Helvetica, sans-serif
+
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+	/* Притискаємо Footer */
+	> main {
+		flex: 1 1 auto;
+	}
+	/* //Фікс для слайдерів */
+	* {
+		min-width: 0;
+	}
+}
+
+.header {
+	border-bottom: 1px solid #ccc;
+}
+
+
+.container{
+	width: 100%;
+	padding-left: 300px;
+	padding-right: 100px;
+
+}
+
+@media(max-width: 768px){
+	.container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.container__liner {
+	padding: 20px;
+	width:100%;
+	height: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	gap: 50px;
+
+}
+
+.email__input {
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+}
+
+
+.container__inner {
+	width: 400px;
+}
+
+
+.container__title {
+	font-size: 36px;
+
+}
+
+.subtitle_inner {
+	width: 100%;
+}
+
+.container__sub-title {
+	width: 100%;
+	font-size: 28px;
+	line-height: 150%;
+
+}
+
+
+.login {
+	width: 100%;
+}
+
+.container__content {
+	padding: 0 10px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+}
+
+
+.content__input {
+	border: 1px solid #ccc;
+	width: 100%;
+	margin-top: 8px;
+	padding: 20px 40px 20px 10px;
+	border-radius: 4px;
+}
+
+
+.content__input:focus {
+	border: 1px solid #1a79ff;
+}
+
+.button__action {
+	width: 100%;
+	font-size: 18px;
+	margin-top: 5px;
+	padding: 15px;
+	border-radius: 6px;
+	background-color: #1a79ff;
+	color: #fff;
+	transition: all .3s linear;
+}
+
+.button__action:active {
+	background-color: #0d4ba2;
+}
+
+
+
+input {
+	font-size: 18px;
+}
+
+
+
+
+
+.Password__inner {
+	position: relative;
+}
+
+.Password__inner i {
+	position: absolute;
+	z-index: 2;
+	top: 45%;
+	margin-right: 10px;
+	font-size: 20px;
+	right: 0;
+	color: #ccc;
+	cursor: pointer;
+}
+
+.footer-container {
+	width: 100%;
+	padding: 20px;
+	width:100%;
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	border-top: 1px solid #ccc;
+}
+
+.footer__container__inner {
+	width: 1000px;
+
+}
+
+.copyright {
+	color: #ccc;
+	text-align: center;
+}

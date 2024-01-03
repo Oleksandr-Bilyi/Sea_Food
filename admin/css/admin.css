@@ -1,0 +1,31 @@
+
+body {
+	text-align: center;
+}
+
+.container {
+	font-size: 18px;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+input {
+
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+button {
+	margin-top: 5px;
+	font-size: 18px;
+
+}
+
+footer {
+	margin-top: 50px;
+	border-top: 1px solid black;
+}
