@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link rel="stylesheet" href="../css/admin.css">
-    <title>Адміністративна панель</title>
-    <!-- Додайте сюди ваші стилі або зовнішні таблиці стилів (CSS) -->
+    <title>Administrative Panel</title>
     <style>
         table {
             border-collapse: collapse;
@@ -19,50 +18,45 @@
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: rgb(194, 126, 0);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Адміністративна панель</h1>
+        <h1>Administrative Panel</h1>
     </header>
+	 <main class="page">
+		<section class="product__table">
+			<h2>Product Table</h2>
+			<div class="table">
+				<table id="productTable">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Product Name</th>
+								<th>Price</th>
+								<th>Courier-id</th>
+								<th>Quantity in Stock</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- List of accepted orders -->
+							<h2></h2>
+							<ul id="orderList"></ul>
 
-    <section>
-        <h2>Таблиця товарів</h2>
-        <table id="productTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Ім'я</th>
-                    <th>Пошта</th>
-                    <th>Назва товару</th>
-                    <th>Ціна</th>
-                    <th>Кількість на складі</th>
-
-                </tr>
-            </thead>
-            <tbody>
-
-
-
-
-					<!-- Список прийнятих замовлень -->
-					<h2></h2>
-					<ul id="orderList"></ul>
-				
-
-					<script src="js/admin_panel.js"></script>
-                <!-- Тут буде автоматично додано товари за допомогою JavaScript -->
-            </tbody>
-        </table>
-    </section>
-
-
+							<script src="js/admin_panel.js"></script>
+							<!-- Products will be automatically added here using JavaScript -->
+						</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
     <footer>
-        <p>&copy; 2023 Адміністративна панель</p>
+        <p>&copy; 2024 - Administrative Panel</p>
     </footer>
 
-    <!-- Додайте сюди ваші скрипти (JavaScript) або зовнішні файли скриптів -->
 </body>
 </html>

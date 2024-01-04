@@ -50,16 +50,10 @@ body {
 
 .container{
 	width: 100%;
-	padding-left: 300px;
-	padding-right: 100px;
+	padding-left: 10px;
 
-}
-
-@media(max-width: 768px){
-	.container{
-		padding-left: 10px;
 		padding-right: 10px;
-	}
+
 }
 
 .container__liner {
@@ -67,8 +61,8 @@ body {
 	width:100%;
 	height: 100%;
 	display: flex;
-	align-items: start;
-	justify-content: start;
+	align-items: center;
+	justify-content: center;
 	gap: 50px;
 
 }
@@ -178,7 +172,7 @@ input {
 }
 
 .footer__container__inner {
-	width: 1000px;
+margin: 0 auto;
 
 }
 

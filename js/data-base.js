@@ -1,11 +1,23 @@
-// ТОВАРИ - Products
+const mysql = require("mysql2");
 
-// import  {products} from "./start.js";
+const connection = mysql.createConnection({
+  host: "your host",
+  user: "your user",
+  password: "your password",
+  database: "your database",
+});
 
+connection.connect((err) => {
+  if (err) {
+    console.error("Помилка підключення до бази даних:", err);
+    return;
+  }
+  console.log("Підключено до бази даних");
+});
 
-	// Basket
+// Basket
 
-	const productList = document.getElementById("product-list");
+const productList = document.getElementById("product-list");
 const cartContent = document.querySelector(".content__list");
 const total = document.querySelector(".total");
 const makeOrderBtn = document.querySelector(".makeOrder");
@@ -191,10 +203,27 @@ makeOrderBtn.addEventListener("click", () => {
 function displayOrderSummary() {}
 
 function initApp() {
-  products.forEach((product) => {
-    const productCard = createProductCard(product);
-    productList.appendChild(productCard);
-  });
-}
+	// Отримуємо дані з бази даних
+	connection.query("SELECT * FROM ваша_таблиця", (err, results) => {
+	  if (err) {
+		 console.error("Помилка отримання даних з бази даних:", err);
+		 return;
+	  }
+
+	  // Проходимося по результатам та створюємо картки продуктів
+	  results.forEach((product) => {
+		 const productCard = createProductCard(product);
+		 productList.appendChild(productCard);
+	  });
+	});
+ }
 
 initApp();
+
+connection.end((err) => {
+	if (err) {
+	  console.error("Помилка закриття підключення:", err);
+	  return;
+	}
+	console.log("З'єднання закрито");
+ });

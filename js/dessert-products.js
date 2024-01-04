@@ -1,17 +1,17 @@
 
 // ТОВАРИ - Products
 
-import  {products} from "./dessert.js"
+// import  {products} from "./dessert.js"
 
-export const productList = document.getElementById("product-list");
-export const cartContent = document.querySelector(".content__list");
-export const total = document.querySelector(".total");
-export const makeOrderBtn = document.querySelector(".makeOrder");
-export const cartQuantity = document.querySelector(".cart__quantity");
+const productList = document.getElementById("product-list");
+const cartContent = document.querySelector(".content__list");
+const total = document.querySelector(".total");
+const makeOrderBtn = document.querySelector(".makeOrder");
+const cartQuantity = document.querySelector(".cart__quantity");
 
 // Заповнення карток товарів
 
-export function createProductCard(product) {
+function createProductCard(product) {
   const productItem = document.createElement("div");
   productItem.classList.add("products__item");
 
@@ -64,21 +64,7 @@ export function createProductCard(product) {
   return productItem;
 }
 
-//  document.addEventListener('DOMContentLoaded', function () {
-// 	// Читаємо збережені дані з локального сховища
-// 	const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
-
-// 	// Відтворюємо вміст корзини на основі збережених даних
-// 	savedCart.forEach((savedProduct) => {
-// 	  addToCart(savedProduct);
-// 	});
-
-// 	// Оновлюємо загальну суму та кількість товарів в корзині
-// 	updateTotal();
-// 	updateCartQuantity();
-//  });
-
-export function addToCart(product) {
+function addToCart(product) {
   // Додаємо продукт до кошика
   const cartProductItem = document.createElement("li");
   cartProductItem.classList.add("cart-content__item");
@@ -144,11 +130,10 @@ export function addToCart(product) {
   updateTotal(product.price, "add");
   console.log(`Product added to cart: ${product.name}`);
 
-  //   // Зберігаємо оновлені дані кошика в локальне сховище
-  //   saveCartToLocalStorage();
+
 }
 
-export function updateQuantity(
+function updateQuantity(
   priceElement,
   productPrice,
   operation,
@@ -174,23 +159,8 @@ export function updateQuantity(
   saveCartToLocalStorage();
 }
 
-//  function saveCartToLocalStorage() {
-// 	// Зберігаємо дані кошика в локальне сховище
-// 	const cartItems = document.querySelectorAll('.cart-content__item');
-// 	const cartData = [];
 
-// 	cartItems.forEach((item) => {
-// 	  const productName = item.querySelector('.cart-content__product h3').textContent;
-// 	  const productPrice = parseFloat(item.querySelector('.cart-price').textContent.replace('₴', ''));
-// 	  const quantity = parseInt(item.querySelector('.quantity-container span').textContent);
-
-// 	  cartData.push({ name: productName, price: productPrice, quantity: quantity });
-// 	});
-
-// 	localStorage.setItem('cart', JSON.stringify(cartData));
-//  }
-
-export function updateTotal(amount, operation, quantity, priceElement) {
+function updateTotal(amount, operation, quantity, priceElement) {
   const currentTotal = parseFloat(total.textContent.replace("₴", ""));
   const productPrice = parseFloat(amount);
 
@@ -204,7 +174,7 @@ export function updateTotal(amount, operation, quantity, priceElement) {
   priceElement.textContent = `${updatedProductPrice}₴`;
 }
 
-export function updateCartQuantity() {
+function updateCartQuantity() {
   // Оновлюємо кількість елементів у кошику
   const cartItems = document.querySelectorAll(".cart-content__item");
   const cartQuantityValue = cartItems.length;
@@ -216,9 +186,9 @@ makeOrderBtn.addEventListener("click", () => {
   displayOrderSummary();
 });
 
-export function displayOrderSummary() {}
+function displayOrderSummary() {}
 
-export function initApp() {
+function initApp() {
   products.forEach((product) => {
     const productCard = createProductCard(product);
     productList.appendChild(productCard);

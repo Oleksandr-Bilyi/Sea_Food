@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 	// Додати приклад товару
-	addProductToTable(1, "Олег", "eamil@gmail.com", "Риба", "$6.00", 50);
-	addProductToTable(2, "Наташа", "eamil@gmail.com", "Стартер", "$5.99", 16);
-	addProductToTable(3, "Василь", "eamil@gmail.com", "Десерт", "$10.99", 34);
-	addProductToTable(4, "Антон", "eamil@gmail.com", "Короп", "$7.99", 4);
+	addProductToTable(1, "Олег", "eamil@gmail.com", "Риба", "$6.00", 38654, 50);
+	addProductToTable(2, "Наташа", "eamil@gmail.com", "Стартер", "$5.99", 57433, 16);
+	addProductToTable(3, "Василь", "eamil@gmail.com", "Десерт", "$10.99", 24324, 34);
+	addProductToTable(4, "Антон", "eamil@gmail.com", "Короп", "$7.99", 34352, 4);
 
-
-
-	// Додайте інші товари, які потрібно автоматично додати
 });
 
-function addProductToTable(id, name, email, product, price, quantity) {
+function addProductToTable(id, name, email, product, price, quantity, courier) {
 	var tableBody = document.getElementById("productTable").getElementsByTagName('tbody')[0];
 
 	var newRow = tableBody.insertRow();
@@ -20,6 +17,8 @@ function addProductToTable(id, name, email, product, price, quantity) {
 	var cell4 = newRow.insertCell(3);
 	var cell5 = newRow.insertCell(4);
 	var cell6 = newRow.insertCell(5);
+	var cell7 = newRow.insertCell(6);
+
 
 
 	cell1.innerHTML = id;
@@ -27,16 +26,35 @@ function addProductToTable(id, name, email, product, price, quantity) {
 	cell3.innerHTML = email;
 	cell4.innerHTML = product;
 	cell5.innerHTML = price;
+	cell7.innerHTML = courier;
 	cell6.innerHTML = quantity;
 
 	// Додати кнопку "Прийняти замовлення" до кожного рядка
 	var acceptButton = document.createElement("button");
-	acceptButton.innerHTML = "Прийняти замовлення";
+	acceptButton.innerHTML = "Accept order";
+	acceptButton.classList.add('buttonAccept');
 	acceptButton.onclick = function() {
-		 acceptOrder(id, name, email, product, price, quantity);
+		 acceptOrder(id, name, email, product, price, courier, quantity);
+		 deleteRow(newRow);
 	};
 
 	newRow.appendChild(acceptButton);
+
+
+	// Add "Delete" button to each row
+	var deleteButton = document.createElement("button");
+	deleteButton.innerHTML = "Delete";
+	deleteButton.classList.add('buttonDelete');
+	deleteButton.onclick = function() {
+		deleteRow(newRow);
+	};
+	newRow.appendChild(deleteButton);
+}
+
+// Function to delete a row
+function deleteRow(row) {
+	var tableBody = document.getElementById("productTable").getElementsByTagName('tbody')[0];
+	tableBody.removeChild(row);
 }
 
 
@@ -62,10 +80,7 @@ function clearTableRows() {
 }
 
 // Функція для очищення елементів у списку прийнятих замовлень
-function clearOrderList() {
-	var orderList = document.getElementById("orderList");
-	orderList.innerHTML = ""; // Видаляємо вміст списку
-}
+
 
 // Функція для прийняття всіх замовлень
 function acceptOrderForAll() {
@@ -87,7 +102,6 @@ function acceptOrderForAll() {
 	}
 
 	// Очистити список прийнятих замовлень
-	clearOrderList();
 }
 
 // Функція для відправки замовлення на сервер
