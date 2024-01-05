@@ -485,8 +485,8 @@ body._lock {
 		@media (max-width: 768px) {
 			padding: 10px 30px;
 		}
-		@media (max-width: 475px) {
-			display: none;
+		@media (max-width: 375px) {
+			padding: 6px 19px;
 		}
 	}
 }

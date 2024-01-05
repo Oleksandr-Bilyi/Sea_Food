@@ -18,45 +18,228 @@
         }
 
         th {
-            background-color: rgb(194, 126, 0);
+            background-color: rgb(150, 79, 47);
         }
     </style>
 </head>
-<body>
+<body class="admin-body">
     <header>
         <h1>Administrative Panel</h1>
     </header>
 	 <main class="page">
-		<section class="product__table">
-			<h2>Product Table</h2>
-			<div class="table">
-				<table id="productTable">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Name</th>
-								<th>Email</th>
-								<th>Product Name</th>
-								<th>Price</th>
-								<th>Courier-id</th>
-								<th>Quantity in Stock</th>
-							</tr>
-						</thead>
-						<tbody>
-							<!-- List of accepted orders -->
-							<h2></h2>
-							<ul id="orderList"></ul>
+		<div id="tabbedb_box_1" class="tabbed_box">
+				<div class="tabbed_area">
+					<ul class="tabs">
+							<li><a href="javascript:tabSwitch('tab_1', 'content_1');" id="tab_1" class="active">Orders</a></li>
+							<li><a href="javascript:tabSwitch('tab_2', 'content_2');" id="tab_2">add product</a></li>
+							<li><a href="javascript:tabSwitch('tab_3', 'content_3');" id="tab_3">Update product</a></li>
+							<li><a href="javascript:tabSwitch('tab_4', 'content_4');" id="tab_4">Manage Couriers</a></li>
+							<li><a href="javascript:tabSwitch('tab_5', 'content_5');" id="tab_5">Manage Users</a></li>
+					</ul>
 
-							<script src="js/admin_panel.js"></script>
-							<!-- Products will be automatically added here using JavaScript -->
-						</tbody>
-				</table>
+				<div id="content_1" class="content">
+					<section class="product__table">
+						<h2>Product Table</h2>
+						<div class="table">
+							<table id="productTable">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Name</th>
+											<th>Email</th>
+											<th>Product Name</th>
+											<th>Price</th>
+											<th>Courier-id</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<!-- List of accepted orders -->
+										<h2></h2>
+										<ul id="orderList"></ul>
+
+
+									</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+
+				<div id="content_2" class="content">
+					<section class="add-product admin-panel">
+						<div class="container__action">
+							<div class="add__product__container">
+								<h2 class="section__title">Add Product</h2>
+								<form id="addProductForm">
+									<div class="update__container">
+										<div class="div-edit">
+											<label for="productName">Name:</label>
+											<input type="text" id="productName" name="productName" required>
+										</div>
+										<div class="div-edit">
+											<label for="productPrice">Price:</label>
+											<input type="number" id="productPrice" name="productPrice" required>
+										</div>
+										<div class="div-edit">
+											<label for="productImage">Image URL:</label>
+											<input type="text" id="productImage" name="productImage" required>
+
+										</div>
+										<div class="div-edit">
+											<label for="productText">Description:</label>
+											<textarea id="productText" name="productText" required></textarea>
+										</div>
+
+
+										<button class="update__button" type="button" onclick="addProduct()">Add Product</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<div id="content_3" class="content">
+					<section class="edit-products admin-panel">
+						<div class="container__action">
+							<div class="update__product__container">
+								<h2 class="section__title">Update Product</h2>
+								<form id="updateProductForm">
+									<div class="update__container">
+										<div class="div-edit">
+											<label for="productId">Product ID:</label>
+											<input type="number" id="productId" name="productId" required>
+										</div>
+										<div class="div-edit">
+											<label for="productName">Name:</label>
+											<input type="text" id="productName" name="productName" required>
+										</div>
+										<div class="div-edit">
+											<label for="productPrice">Price:</label>
+											<input type="number" id="productPrice" name="productPrice" required>
+										</div>
+										<div class="div-edit">
+											<label for="productImage">Image URL:</label>
+											<input type="text" id="productImage" name="productImage" required>
+
+										</div>
+										<div class="div-edit">
+											<label for="productText">Description:</label>
+											<textarea id="productText" name="productText" required></textarea>
+										</div>
+
+
+										<button class="update__button" type="button" onclick="updateProduct()">Update Product</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<div id="content_4" class="content">
+					<h2 class="section__title">Courier Registration Requests</h2>
+					<section class="courier__management admin-panel">
+						 <div class="container__action">
+							  <div class="add__courier__container">
+									<!-- <h3>Add Courier</h3>
+									<form id="addCourierForm">
+										 <div class="div-edit">
+											  <label for="courierName">Courier Name:</label>
+											  <input type="text" id="courierName" name="courierName" required>
+										 </div>
+										 <div class="div-edit">
+											  <label for="courierEmail">Courier Email:</label>
+											  <input type="email" id="courierEmail" name="courierEmail" required>
+										 </div>
+										 <button class="update__button" type="button" onclick="addCourier()">Add Courier</button>
+									</form> -->
+							  </div>
+							<div class="table__couriers">
+							  <div class="courier__table">
+									<table id="courierRequestsTable">
+										 <thead>
+											  <tr>
+													<th>Name</th>
+													<th>Email</th>
+													<th>Phone Number</th>
+											  </tr>
+										 </thead>
+										 <tbody>
+											  <!-- List of courier registration requests -->
+										 </tbody>
+									</table>
+								</div>
+								<div class="current__courier__table">
+									<h2 class="table__title">Table of Сouriers</h2>
+									<table id="courierCurrentTable">
+										 <thead>
+											  <tr>
+													<th>ID</th>
+													<th>Name</th>
+													<th>Email</th>
+													<th>Phone Number</th>
+											  </tr>
+										 </thead>
+										 <tbody>
+											  <!-- List of courier registration requests -->
+										 </tbody>
+									</table>
+								</div>
+							</div>
+						 </div>
+					</section>
+			  </div>
+
+			  	<div id="content_5" class="content">
+					<h2 class="section__title">User Registration Requests</h2>
+					<section class="courier__management admin-panel">
+						 <div class="container__action">
+							  <div class="add__courier__container">
+							  </div>
+							<div class="table__couriers">
+							  <div class="courier__table">
+									<table id="courierRequestsTable">
+										 <thead>
+											  <tr>
+													<th>Name</th>
+													<th>Email</th>
+													<th>Phone Number</th>
+											  </tr>
+										 </thead>
+										 <tbody>
+											  <!-- List of courier registration requests -->
+										 </tbody>
+									</table>
+								</div>
+								<div class="current__courier__table">
+									<h2 class="table__title">Table of Users</h2>
+									<table id="courierCurrentTable">
+										 <thead>
+											  <tr>
+													<th>ID</th>
+													<th>Name</th>
+													<th>Email</th>
+													<th>Phone Number</th>
+											  </tr>
+										 </thead>
+										 <tbody>
+											  <!-- List of courier registration requests -->
+										 </tbody>
+									</table>
+								</div>
+							</div>
+						 </div>
+					</section>
+			  	</div>
 			</div>
-		</section>
+		</div>
+
+
 	</main>
     <footer>
         <p>&copy; 2024 - Administrative Panel</p>
     </footer>
-
+	 <script src="js/admin_panel.js"></script>
 </body>
 </html>
