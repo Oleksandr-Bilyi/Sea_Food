@@ -1,6 +1,6 @@
 // ТОВАРИ - Products
 
-// import  {products} from "./start.js";
+import  {products} from "./start.js";
 
 
 	// Basket

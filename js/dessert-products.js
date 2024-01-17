@@ -1,7 +1,7 @@
 
 // ТОВАРИ - Products
 
-// import  {products} from "./dessert.js"
+import  {products} from "./dessert.js"
 
 const productList = document.getElementById("product-list");
 const cartContent = document.querySelector(".content__list");

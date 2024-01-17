@@ -41,4 +41,25 @@ export const products = [
     text: "dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.",
     price: "360.00",
   },
+  {
+	id: 7,
+	name: "Product name 7",
+	image: "1.jpg",
+	text: "dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.",
+	price: "800.00",
+ },
+ {
+	id: 8,
+	name: "Product name 8",
+	image: "1.jpg",
+	text: "dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.",
+	price: "450.00",
+ },
+ {
+	id: 9,
+	name: "Product name 9",
+	image: "1.jpg",
+	text: "dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus rerum quaerat voluptatum velit mollitia vitae laudantium, optio eaque inventore ullam consequuntur aperiam! Aut doloremque voluptatem asperiores laudantium, sit laborum.",
+	price: "300.00",
+ },
 ];

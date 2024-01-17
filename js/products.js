@@ -1,7 +1,7 @@
 
 
 
-// import { products } from "./main-products.js";
+import { products } from "./main-products.js";
 
 
 							// Basket
