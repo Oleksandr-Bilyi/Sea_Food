@@ -873,13 +873,14 @@ body._touch .menu__arrow {
 		color: yellow;
 	}
 }
-									/*========== Footer ============*/
 
-											/* Section-subscribe */
+/* Section-subscribe */
 
 .section__subscribe {
 	background-color: rgb(150, 79, 47);
 }
+
+
 .footer__subscribe {
 	max-width: $maxWidthContainer;
 	font-family: "Roboto", sans-serif;
@@ -984,6 +985,8 @@ body._touch .menu__arrow {
 		}
 	}
 }
+
+	/*========== Footer ============*/
 
 /* Footer-content */
 
@@ -1144,6 +1147,7 @@ body._touch .menu__arrow {
 		}
 	}
 }
+
 /* Copyright */
 
 .copyright {
@@ -1607,9 +1611,6 @@ body._touch .menu__arrow {
 		}
 	}
 }
-
-
-
 
 
 															/* POP-up */
